@@ -1,0 +1,49 @@
+.lazyLogo {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  .lazyLogo__detail {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    animation: cross-rotate-ccw 1s infinite ease-in-out forwards;
+
+    .col-4 {
+      margin: 0;
+      padding: 0;
+      animation: cross-rotate-cw 0.5s infinite ease-in-out forwards;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@keyframes cross-rotate-cw {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes cross-rotate-ccw {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
